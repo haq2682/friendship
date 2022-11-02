@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <h1>Home View</h1>
-                <h2>Welcome {{auth}}</h2>
+                <h2>Welcome {{auth.name}}</h2>
                 <Button @click="logout">Logout</Button>
             </div>
             <div class="col text-center">
@@ -25,8 +25,8 @@ export default {
     },
     data() {
         return {
-            auth: null,
-            users: null,
+            auth: {},
+            users: {},
         }
     },
     methods: {

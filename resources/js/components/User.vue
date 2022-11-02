@@ -9,13 +9,12 @@
 export default {
     data() {
         return {
-            res: null,
+            res: {},
         }
     },
     created() {
         axios.get("api/getuser/" + this.$route.params.id)
             .then((res) => {
-                console.log(res.data);
                 this.res = res.data;
             })
             .catch(e => console.log(e));
